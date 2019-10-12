@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EE3F7DB-F630-455F-8946-45C331F5A46C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsumirDummy</RootNamespace>
+    <AssemblyName>ConsumirDummy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accountTable.cs">
+      <DependentUpon>CoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClaseCliente.cs" />
+    <Compile Include="ClaseCuenta.cs" />
+    <Compile Include="ClaseDeEnumeraciones.cs" />
+    <Compile Include="clientTable.cs">
+      <DependentUpon>CoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COREDB_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COREDB_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CoreModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoreModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\Request.cs" />
+    <Compile Include="Requests\RequestAccountExists.cs" />
+    <Compile Include="Requests\RequestAccountRegister.cs" />
+    <Compile Include="Requests\RequestAllClients.cs" />
+    <Compile Include="Requests\RequestAllTransactionsOfClient.cs" />
+    <Compile Include="Requests\RequestChangeAccountState.cs" />
+    <Compile Include="Requests\RequestChangeClientState.cs" />
+    <Compile Include="Requests\RequestClientAccounts.cs" />
+    <Compile Include="Requests\RequestClientExists.cs" />
+    <Compile Include="Requests\RequestClientRegister.cs" />
+    <Compile Include="Requests\RequestDeposit.cs" />
+    <Compile Include="Requests\RequestGeneralClientBalance.cs" />
+    <Compile Include="Requests\RequestInterbankTransferFromBank2toBank1.cs" />
+    <Compile Include="Requests\RequestLogToClient.cs" />
+    <Compile Include="Requests\RequestThirdPartyTransfer.cs" />
+    <Compile Include="Requests\RequestTransfer.cs" />
+    <Compile Include="Requests\RequestWithdrawal.cs" />
+    <Compile Include="Responses\Response.cs" />
+    <Compile Include="Responses\ResponseAccountRegister.cs" />
+    <Compile Include="Responses\ResponseChangedAccountState.cs" />
+    <Compile Include="Responses\ResponseChangedClientState.cs" />
+    <Compile Include="Responses\ResponseClientAccounts.cs" />
+    <Compile Include="Responses\ResponseClientRegister.cs" />
+    <Compile Include="Responses\ResponseGeneralClientBalance.cs" />
+    <Compile Include="Responses\ResponseToAllClients.cs" />
+    <Compile Include="Responses\ResponseToAllTransactionsOfClient.cs" />
+    <Compile Include="Responses\ResponseToDeposit.cs" />
+    <Compile Include="Responses\ResponseToInterbankTransferFromBank2toBank1.cs" />
+    <Compile Include="Responses\ResponseToLogin.cs" />
+    <Compile Include="Responses\ResponseToThirdParties.cs" />
+    <Compile Include="Responses\ResponseToTransfer.cs" />
+    <Compile Include="Responses\ResponseToWithdrawal.cs" />
+    <Compile Include="Responses\ResponseVerifyAccountExists.cs" />
+    <Compile Include="Responses\ResponseVerifyClientExists.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="transactionTable.cs">
+      <DependentUpon>CoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionTypes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="CoreModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CoreModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="COREDB_DataSet.xsc">
+      <DependentUpon>COREDB_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="COREDB_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COREDB_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="COREDB_DataSet.xss">
+      <DependentUpon>COREDB_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CoreModel.edmx.diagram">
+      <DependentUpon>CoreModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CoreModel.Context.cs</LastGenOutput>
+      <DependentUpon>CoreModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CoreModel.edmx</DependentUpon>
+      <LastGenOutput>CoreModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

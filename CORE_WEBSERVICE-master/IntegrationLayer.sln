@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationLayerASP", "ASPBankWebWervices\IntegrationLayerASP.csproj", "{AD3FC2E7-1BA5-4061-9008-9D88F2247AED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationClasses", "IntegrationClasses\IntegrationClasses.csproj", "{53ECD030-133A-42F5-919D-4C9C9E1E3B05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD3FC2E7-1BA5-4061-9008-9D88F2247AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3FC2E7-1BA5-4061-9008-9D88F2247AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3FC2E7-1BA5-4061-9008-9D88F2247AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3FC2E7-1BA5-4061-9008-9D88F2247AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53ECD030-133A-42F5-919D-4C9C9E1E3B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53ECD030-133A-42F5-919D-4C9C9E1E3B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53ECD030-133A-42F5-919D-4C9C9E1E3B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {859F53F4-B5E2-4354-A608-69EFA9E932BD}
+	EndGlobalSection
+EndGlobal
